@@ -1,3 +1,11 @@
+/* DECLARACIÓN DE VARIABLES DE CSS */
+:root {
+  --text-color: aliceblue;
+  --bg-color-primary: blueviolet;
+  --bg-color-menu: rgb(56, 32, 78);
+  --transition: 0, 3s;
+}
+
 * {
   margin: 0;
   padding: 0%;
@@ -37,10 +45,6 @@ header > p {
   font-size: 1.5rem;
 }
 
-nav > .menu_pr {
-  list-style: none;
-}
-
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -50,4 +54,40 @@ nav a {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+
+nav > .menu_pr {
+  list-style: none;
+  display: none;
+  justify-content: space-evenly;
+}
+
+/* nav > .menu_pr > li {
+  margin: 0 0.3 rem;
+ } */
+
+nav > .menu_pr a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: var(--transition-time);
+}
+
+/* Selector para hover sobre las opciones del menú */
+nav > .menu_pr a:hover {
+  color: var(--bg-color-menu);
+  background-color: var(--text-color);
+}
+
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  /* padding: 3rem; */
+}
+
+main > section.hero {
+  display: flex;
 }
