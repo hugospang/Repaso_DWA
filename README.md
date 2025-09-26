@@ -48,3 +48,5 @@ Los enlaces que no aparezcan en azul (ponerlos en negrita) y que tampoco esten s
 Las declaramos al principio del archivo de CSS en la pseudo-clase :root {}, los nombres deben comenzar con --nombre-de-variable
 
 Llamamos o invocamos con la función var (--valor)
+
+Las variables pueden contener cualquier valor(colores, )

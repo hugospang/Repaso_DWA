@@ -90,4 +90,68 @@ main {
 
 main > section.hero {
   display: flex;
+  gap: 2rem;
+}
+
+main > section.hero > div.content-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+main > section.hero > div.content-text {
+  display: flex;
+  gap: 1rem;
+  width: 60%;
+}
+
+main > section.hero > div.content-features > .column {
+  flex: 1;
+}
+
+main > section.hero > div.content-features > .column:last-child {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap */
+  gap: 1rem;
+}
+
+main > section.hero > div.content-features > .column > .feature {
+  position: relative;
+}
+
+main > section.hero > div.content-features > .column > .feature > img {
+  height: 100%;
+  object-fit: cover;
+}
+
+main > section.hero > div.content-features > .column > .feature > div {
+  position: absolute;
+  top: 0%;
+}
+
+/* GALLERY */
+
+#gallery {
+  padding: 4rem 0;
+}
+
+#gallery > h2 {
+  margin-bottom: 2rem;
+}
+
+#gallery > .gallery-cont {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+}
+
+/* MEDIA QUERY */
+
+/* Cuando el viewport mida menos de 456px se activa este media query */
+@media screen and (max-width: 456px) {
+  #gallery > .gallery-cont {
+    grid-template-columns: auto;
+  }
 }
