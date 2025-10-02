@@ -1,18 +1,19 @@
 /* DECLARACIÓN DE VARIABLES DE CSS */
 :root {
   --text-color: aliceblue;
-  --bg-color-primary: blueviolet;
-  --bg-color-menu: rgb(56, 32, 78);
-  --transition: 0, 3s;
+  --bg-color-primary: rgb(106, 90, 205);
+  --bg-color-menu: rgb(33, 0, 64);
+  --transition-time: 0.3s;
 }
 
 * {
   margin: 0;
-  padding: 0%;
+  padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  /* font-size: 12px; */
+  /* font-size: 28px; */
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -35,36 +36,29 @@ h1 {
 }
 
 header {
-  background-color: blueviolet;
-  color: aliceblue;
-  text-align: center;
+  background-color: slateblue;
+  /* background-color: rgba(1, 1, 1, 0.5); */
+  color: var(--text-color);
 }
 
-header > p {
-  color: aliceblue;
+header > div > p {
+  color: red;
   font-size: 1.5rem;
 }
 
-nav ul {
-  display: flex;
-  justify-content: space-between;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+nav {
+  background-color: rgb(33, 0, 64);
 }
 
 nav > .menu_pr {
   list-style: none;
-  display: none;
+  display: flex;
   justify-content: space-evenly;
 }
 
 /* nav > .menu_pr > li {
-  margin: 0 0.3 rem;
- } */
+    margin: 0 0.3rem;
+} */
 
 nav > .menu_pr a {
   text-decoration: none;
@@ -82,6 +76,7 @@ nav > .menu_pr a:hover {
 }
 
 /* MAIN */
+
 main {
   display: flex;
   flex-direction: column;
@@ -100,7 +95,7 @@ main > section.hero > div.content-text {
   width: 40%;
 }
 
-main > section.hero > div.content-text {
+main > section.hero > div.content-features {
   display: flex;
   gap: 1rem;
   width: 60%;
@@ -113,7 +108,7 @@ main > section.hero > div.content-features > .column {
 main > section.hero > div.content-features > .column:last-child {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap */
+  /* flex-wrap: wrap; */
   gap: 1rem;
 }
 
@@ -128,7 +123,42 @@ main > section.hero > div.content-features > .column > .feature > img {
 
 main > section.hero > div.content-features > .column > .feature > div {
   position: absolute;
-  top: 0%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  color: aliceblue;
+  background: #ffffff;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/* FULL WIDTH */
+#full-w > div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#full-w > div > h3 {
+  font-size: 2.5rem;
+  opacity: 0;
+  color: aliceblue;
+  position: absolute;
+  transition: 0.6s;
+}
+
+#full-w > div:hover > h3 {
+  opacity: 1;
 }
 
 /* GALLERY */
